@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import javafx.geometry.Insets?>-->
+<!--<?import javafx.scene.layout.GridPane?>-->
+<!--<?import javafx.scene.control.Button?>-->
+<!--<?import javafx.scene.control.Label?>-->
+
+<?import java.lang.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import com.jfoenix.validation.ValidationFacade?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="elevator.Controller"
+           xmlns="http://javafx.com/javafx/2.2">
+    <VBox spacing="20" alignment="CENTER" maxWidth="600" maxHeight="600" style="-fx-background-color: #9ccedb;">
+
+
+        <HBox spacing="20" alignment="CENTER">
+            <!--奇数层电梯按钮-->
+            <VBox spacing="10" alignment="CENTER">
+
+                <JFXButton fx:id="e1" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >1
+                </JFXButton>
+
+                <JFXButton fx:id="e3" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >3
+                </JFXButton>
+
+                <JFXButton fx:id="e5" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >5
+                </JFXButton>
+
+                <JFXButton fx:id="e7" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >7
+                </JFXButton>
+
+                <JFXButton fx:id="e9" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >9
+                </JFXButton>
+
+                <JFXButton fx:id="e11" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >11
+                </JFXButton>
+
+                <JFXButton fx:id="e13" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >13
+                </JFXButton>
+
+                <JFXButton fx:id="e15" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >15
+                </JFXButton>
+
+                <JFXButton fx:id="e17" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >17
+                </JFXButton>
+
+                <JFXButton fx:id="e19" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >19
+                </JFXButton>
+
+                <JFXButton fx:id="e_open" prefWidth="80" prefHeight="30" text="&lt;|&gt;"
+                           styleClass="s-button" buttonType="RAISED" >
+                </JFXButton>
+
+            <!--end 奇数层电梯-->
+            </VBox>
+
+            <!--偶数层电梯按钮-->
+            <VBox spacing="10" alignment="CENTER">
+
+                <JFXButton fx:id="e2" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >2
+                </JFXButton>
+
+                <JFXButton fx:id="e4" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >4
+                </JFXButton>
+
+                <JFXButton fx:id="e6" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >6
+                </JFXButton>
+
+                <JFXButton fx:id="e8" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >8
+                </JFXButton>
+
+                <JFXButton fx:id="e10" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >10
+                </JFXButton>
+
+                <JFXButton fx:id="e12" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >12
+                </JFXButton>
+
+                <JFXButton fx:id="e14" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >14
+                </JFXButton>
+
+                <JFXButton fx:id="e16" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >16
+                </JFXButton>
+
+                <JFXButton fx:id="e18" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >18
+                </JFXButton>
+
+                <JFXButton fx:id="e20" prefWidth="80" prefHeight="30"
+                           styleClass="e-button" buttonType="RAISED" >20
+                </JFXButton>
+
+                <JFXButton fx:id="e_close" prefWidth="80" prefHeight="30" text="&gt;|&lt;"
+                           styleClass="s-button" buttonType="RAISED" >
+                </JFXButton>
+
+                <!--end 偶数层电梯-->
+            </VBox>
+
+            <!--电梯单选框-->
+            <VBox spacing="20" alignment="CENTER"  >
+                <children>
+
+
+                    <JFXRadioButton fx:id="radio_1" selected="true" text="elevator 1" styleClass="custom-jfx-radio-button">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="toggleGroup"/>
+                        </toggleGroup>
+                    </JFXRadioButton>
+                    <JFXRadioButton fx:id="radio_2" selected="false"
+                                    text="elevator 2" toggleGroup="$toggleGroup" styleClass="custom-jfx-radio-button"/>
+                    <JFXRadioButton fx:id="radio_3" selected="false"
+                                    text="elevator 3" toggleGroup="$toggleGroup" styleClass="custom-jfx-radio-button"/>
+                    <JFXRadioButton fx:id="radio_4" selected="false"
+                                    text="elevator 4" toggleGroup="$toggleGroup" styleClass="custom-jfx-radio-button"/>
+                    <JFXRadioButton fx:id="radio_5" selected="false"
+                                    text="elevator 5" toggleGroup="$toggleGroup" styleClass="custom-jfx-radio-button"/>
+                </children>
+
+            </VBox>
+
+            <!--电梯运行图示-->
+            <VBox spacing="20" alignment="CENTER">
+                <children>
+                    <HBox spacing="20" alignment="CENTER">
+                        <children>
+                            <JFXSlider fx:id="slider1" orientation="VERTICAL" min="1" max="20"
+                                       prefHeight="400" styleClass="jfx-slider-colored">
+                            </JFXSlider>
+                            <JFXSlider fx:id="slider2" orientation="VERTICAL" min="1" max="20"
+                                       prefHeight="400" styleClass="jfx-slider-colored">
+                            </JFXSlider>
+                            <JFXSlider fx:id="slider3" orientation="VERTICAL" min="1" max="20"
+                                       prefHeight="400" styleClass="jfx-slider-colored">
+                            </JFXSlider>
+                            <JFXSlider fx:id="slider4" orientation="VERTICAL" min="1" max="20"
+                                       prefHeight="400" styleClass="jfx-slider-colored">
+                            </JFXSlider>
+                            <JFXSlider fx:id="slider5" orientation="VERTICAL" min="1" max="20"
+                                       prefHeight="400" styleClass="jfx-slider-colored">
+                            </JFXSlider>
+                        </children>
+                    </HBox>
+                </children>
+            </VBox>
+
+            <VBox spacing="20" alignment="CENTER">
+
+
+            </VBox>
+
+        </HBox>
+
+        <!--楼层选择-->
+        <HBox spacing="20" alignment="CENTER">
+            <VBox spacing="25" alignment="CENTER">
+                <VBox spacing="20">
+                    <Label styleClass="title-label">Current Floor</Label>
+                </VBox>
+                <VBox spacing="20">
+                    <JFXComboBox id="combo" prefWidth="200"
+                                 promptText="Select Item" >
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="1" />
+                                <String fx:value="2" />
+                                <String fx:value="3" />
+                                <String fx:value="4" />
+                                <String fx:value="5" />
+                                <String fx:value="6" />
+                                <String fx:value="7" />
+                                <String fx:value="8" />
+                                <String fx:value="9" />
+                                <String fx:value="10" />
+                                <String fx:value="11" />
+                                <String fx:value="12" />
+                                <String fx:value="13" />
+                                <String fx:value="14" />
+                                <String fx:value="15" />
+                                <String fx:value="16" />
+                                <String fx:value="17" />
+                                <String fx:value="18" />
+                                <String fx:value="19" />
+                                <String fx:value="20" />
+                            </FXCollections>
+                        </items>
+                        <value>
+                            <String fx:value="1" />
+                        </value>
+                    </JFXComboBox>
+                </VBox>
+            </VBox>
+
+
+            <VBox spacing="20">
+                <JFXButton fx:id="up1" prefWidth="30" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >↑
+                </JFXButton>
+                <JFXButton fx:id="dis1" prefWidth="50" prefHeight="30"
+                           styleClass="d-button" >1
+                </JFXButton>
+                <JFXButton fx:id="down1" prefWidth="30" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >↓
+                </JFXButton>
+            </VBox>
+
+            <VBox spacing="20">
+                <JFXButton fx:id="up2" prefWidth="30" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >↑
+                </JFXButton>
+                <JFXButton fx:id="dis2" prefWidth="50" prefHeight="30"
+                           styleClass="d-button" >1
+                </JFXButton>
+                <JFXButton fx:id="down2" prefWidth="30" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >↓
+                </JFXButton>
+            </VBox>
+
+            <VBox spacing="20">
+                <JFXButton fx:id="up3" prefWidth="30" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >↑
+                </JFXButton>
+                <JFXButton fx:id="dis3" prefWidth="50" prefHeight="30"
+                           styleClass="d-button" >1
+                </JFXButton>
+                <JFXButton fx:id="down3" prefWidth="30" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >↓
+                </JFXButton>
+            </VBox>
+
+            <VBox spacing="20">
+                <JFXButton fx:id="up4" prefWidth="30" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >↑
+                </JFXButton>
+                <JFXButton fx:id="dis4" prefWidth="50" prefHeight="30"
+                           styleClass="d-button" >1
+                </JFXButton>
+                <JFXButton fx:id="down4" prefWidth="30" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >↓
+                </JFXButton>
+            </VBox>
+
+            <VBox spacing="20">
+                <JFXButton fx:id="up5" prefWidth="30" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >↑
+                </JFXButton>
+                <JFXButton fx:id="dis5" prefWidth="50" prefHeight="30"
+                           styleClass="d-button" >1
+                </JFXButton>
+                <JFXButton fx:id="down5" prefWidth="30" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >↓
+                </JFXButton>
+            </VBox>
+        </HBox>
+
+
+    </VBox>
+
+
+
+</StackPane>

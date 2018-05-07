@@ -1,0 +1,30 @@
+
+.e-button {
+    -fx-text-fill:WHITE;
+    -fx-background-color: #edb239;
+    -fx-font-size:14px;
+}
+
+.s-button {
+    -fx-text-fill:WHITE;
+    -fx-background-color: #ed4706;
+    -fx-font-size:14px;
+}
+
+.f-button {
+    -fx-text-fill:WHITE;
+    -fx-background-color: #ed9139;
+    -fx-font-size:14px;
+}
+
+.jfx-slider-colored > .thumb {
+    -fx-background-color: #0f9d58;
+    -jfx-default-thumb: #0f9d58
+}
+
+/*.jfx-slider-colored2 > .thumb {*/
+    /*-fx-background-color: #c5c5c5;*/
+/*}*/
+
+
+
