@@ -1,0 +1,63 @@
+.control-button {
+    -fx-text-fill:WHITE;
+    -fx-background-color: #0f9d58;
+    -fx-font-size:14px;
+}
+
+.display-button{
+    -fx-font-size:14px;
+    -fx-text-fill:Black;
+    -fx-background-color: #ffffff;
+    -fx-alignment: baseline-left
+}
+
+.dialog-accept{
+    -fx-text-fill:WHITE;
+    -fx-background-color: #0f9d58;
+    -fx-font-size:14px;
+}
+
+.dialog-cancel{
+    -fx-text-fill:WHITE;
+    -fx-background-color: #ed5344;
+    -fx-font-size:14px;
+}
+
+.column{
+    -fx-alignment: center;
+}
+
+.warning_head{
+    -fx-background-color: #eda451;
+    -fx-font-weight: BOLD;
+    -fx-font-size: 20px;
+    -fx-text-fill:WHITE;
+}
+
+
+.text-field {
+    -fx-max-width: 300;
+}
+
+.jfx-text-field, .jfx-text-area{
+    -fx-background-color: WHITE;
+    -fx-font-weight: BOLD;
+    -fx-prompt-text-fill: #808080;
+    -fx-alignment: top-left;
+    -jfx-focus-color: #4059A9;
+    -jfx-unfocus-color: #4d4d4d;
+    -fx-max-width: 300;
+}
+
+.jfx-decorator .jfx-decorator-buttons-container {
+    -fx-background-color: -fx-decorator-color;
+}
+
+.jfx-decorator .resize-border {
+    -fx-border-color: -fx-decorator-color;
+    -fx-border-width: 0 4 4 4;
+}
+
+.jfx-text-area, .text-area {
+    -fx-font-weight: BOLD;
+}

@@ -129,8 +129,8 @@
 
             <!--电梯单选框-->
             <VBox spacing="20" alignment="CENTER"  >
-                <children>
 
+                <children>
 
                     <JFXRadioButton fx:id="radio_1" selected="true" text="elevator 1" styleClass="custom-jfx-radio-button">
                         <toggleGroup>

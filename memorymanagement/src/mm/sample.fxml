@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.lang.*?>
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import com.jfoenix.validation.ValidationFacade?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="mm.Controller"
+           xmlns="http://javafx.com/javafx/2.2">
+    <VBox spacing="20" alignment="CENTER" maxWidth="600" maxHeight="800" style="-fx-background-color: #9ccedb;">
+
+
+        <HBox spacing="20" alignment="CENTER">
+
+            <VBox spacing="10" alignment="CENTER">
+            </VBox>
+
+            <!--内存分配结果展示-->
+            <VBox spacing="10" alignment="CENTER">
+
+                <Label styleClass="title-label">注：-1为空闲</Label>
+
+                <TableView layoutX="132.0" layoutY="33.0" prefHeight="200" fx:id="tview">
+                    <columns>
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="137.0" text="内存" fx:id="memory_1"/>
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="143.0" text="占用者" fx:id="occupation_1"/>
+                    </columns>
+                </TableView>
+
+            </VBox>
+
+            <!--偶数层电梯按钮-->
+            <VBox spacing="10" alignment="CENTER">
+
+                <Label styleClass="title-label">当前请求：</Label>
+
+                <JFXButton fx:id="current_application"  prefHeight="40" prefWidth="150.0" buttonType="FLAT" text="  "
+                           style="-fx-font-size:14px;"/>
+
+                <JFXButton fx:id="start_FF" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >首次适应算法
+                </JFXButton>
+
+                <JFXButton fx:id="start_BF" prefHeight="30"
+                           styleClass="f-button" buttonType="RAISED" >最佳适应算法
+                </JFXButton>
+
+
+            </VBox>
+
+
+            <VBox spacing="20" alignment="CENTER">
+
+            </VBox>
+
+            <VBox spacing="20" alignment="CENTER">
+
+
+            </VBox>
+
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER">
+            <Separator prefWidth="600.0"></Separator>
+        </HBox>
+
+
+
+        <!--楼层选择-->
+        <HBox spacing="20" alignment="CENTER">
+
+            <!--内存分配结果展示-->
+            <VBox spacing="10" alignment="CENTER">
+
+                <HBox spacing="20" alignment="CENTER">
+                    <TableView layoutX="132.0" layoutY="33.0" prefHeight="100" fx:id="tview2">
+                        <columns>
+                            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="指令编号" fx:id="index"/>
+                            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="当前地址" fx:id="add"/>
+                            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="下一条指令地址" fx:id="next_add"/>
+                        </columns>
+                    </TableView>
+
+                    <VBox spacing="10" alignment="CENTER">
+                        <JFXButton fx:id="current_page_number"  prefHeight="40" prefWidth="150.0" buttonType="FLAT" text="当前指令页号:"
+                                   style="-fx-font-size:14px;"/>
+
+                        <JFXButton fx:id="next_page_number"  prefHeight="40" prefWidth="150.0" buttonType="FLAT" text="下一条指令页号:"
+                                   style="-fx-font-size:14px;"/>
+                    </VBox>
+
+                </HBox>
+
+            </VBox>
+
+        </HBox>
+
+        <!--楼层选择-->
+        <HBox spacing="20" alignment="CENTER">
+
+            <HBox spacing="20" alignment="CENTER">
+                <TableView layoutX="132.0" layoutY="33.0" prefHeight="180" fx:id="tview3">
+                    <columns>
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="内存块编号" fx:id="frame_number"/>
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="页号" fx:id="page_number"/>
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="200.0" text="地址范围" fx:id="add_range"/>
+                    </columns>
+                </TableView>
+
+                <VBox spacing="10" alignment="CENTER">
+
+                    <JFXButton fx:id="missing_page_number"  prefHeight="40" prefWidth="150.0" buttonType="FLAT" text="缺页数:"
+                               style="-fx-font-size:14px;"/>
+                    <JFXButton fx:id="missing_page_rate"  prefHeight="40" prefWidth="150.0" buttonType="FLAT" text="缺页率:"
+                               style="-fx-font-size:14px;"/>
+
+                    <JFXButton fx:id="start_FIFO" prefHeight="30" prefWidth="80"
+                               styleClass="f-button" buttonType="RAISED" >FIFO算法
+                    </JFXButton>
+                    <JFXButton fx:id="start_LRU" prefHeight="30" prefWidth="80"
+                               styleClass="f-button" buttonType="RAISED" >LRU算法
+                    </JFXButton>
+                    <JFXButton fx:id="start_LFU" prefHeight="30" prefWidth="80"
+                               styleClass="f-button" buttonType="RAISED" >LFU算法
+                    </JFXButton>
+                </VBox>
+
+            </HBox>
+
+        </HBox>
+
+
+    </VBox>
+
+
+
+</StackPane>
